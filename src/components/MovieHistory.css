@@ -45,7 +45,7 @@
 
 .slider-left-arrow {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 40px;
     left: 0px;
     top: 0px;
@@ -63,7 +63,7 @@
 
 .slider-right-arrow {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 40px;
     right: 0px;
     top: 0px;

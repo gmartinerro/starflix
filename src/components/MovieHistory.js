@@ -3,7 +3,14 @@ import './MovieHistory.css';
 import {connect} from 'react-redux';
 import {getMovieHistory, setCurrentMovie} from '../actions';
 
+// Width in pixels for each item in the slider bar
+const MOVIE_SLIDER_ITEM_WIDTH = 270;
 
+/**
+ * MovieHistory shows a slider showing the list of movies that the user has 
+ * selected and consulted (i.e. pressed "VER FICHA" on them). The slider is controlled
+ * via a pair of buttons to scroll the movie posters left and right.
+ */
 class MovieHistory extends Component {
 
     constructor(props){
@@ -16,13 +23,11 @@ class MovieHistory extends Component {
     }
 
     scrollLeft(){
-        this.setState({position:this.state.position+270})
-        console.log(this.state);
+        this.setState({position:this.state.position + MOVIE_SLIDER_ITEM_WIDTH})
     }
 
     scrollRight(){
-        this.setState({position:this.state.position-270})
-        console.log(this.state);
+        this.setState({position:this.state.position - MOVIE_SLIDER_ITEM_WIDTH})
     }
 
     showMovie(movie){
@@ -53,6 +58,10 @@ class MovieHistory extends Component {
         return <div className='slider-arrow slider-right-arrow' onClick={()=>this.scrollRight()}></div>
     }
 
+    /**
+     * Helper method to move the posters to the proper position depending on the 
+     * current scrolling point.
+     */
     getSliderStyle(){
         return {left: this.state.position + "px"};
     }
@@ -76,7 +85,6 @@ class MovieHistory extends Component {
 }
 
 const mapStateToProps = state =>{
-    console.log(state);
     return {movieHistory: state.movieHistory};
 }
 
