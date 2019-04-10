@@ -11,7 +11,7 @@ The idea is simulate a NETFLIX-like style interface where the user can find:
 * A search bar to search a movie by title (using the search endpoint of swapi.)
 * A summary of the currently selected/found movie.
 * A list of alredy seen movies in a netflix-style strip
-* A automatic slider with the set of characters found in swapi.co.
+* An automatic slider with the set of characters found in swapi.co.
 
 
 # Installation notes
