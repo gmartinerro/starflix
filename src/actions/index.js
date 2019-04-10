@@ -14,8 +14,7 @@ export const fetchMovie = movieId => async (dispatch, getState) => {
     dispatch({ type: SHOW_MOVIE, payload: movie });
 };
 
-export const fetchCharacters = () => async (dispatch, getState) => {
-    const page = Math.ceil(Math.random()*8);
+export const fetchCharacters = (page) => async (dispatch, getState) => {    
     const response = await swapi.get('/people/',{params:{page:page}});
     dispatch({ type: GET_CHARACTERS, payload: response.data });
 };

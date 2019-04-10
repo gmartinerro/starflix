@@ -7,6 +7,7 @@ body {
 .App {
     width: 100%;
     height: auto;
+    min-width: 550px;
 }
 
 .search-form {
@@ -27,7 +28,7 @@ body {
 }
 
 .Header {
-    z-index: 2;
+    z-index: 100;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -119,7 +120,7 @@ body {
     position: relative;
     top: 30px;
     left: 0px;
-    z-index: 20;
+    z-index: 10;
     width: 600px;
     height: 255px;
     max-width: 80%;
@@ -163,34 +164,10 @@ body {
     font-size: 120%;
 }
 
-.MovieHistory {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    margin-top: 70px;
-    /*background-color: rgba(255, 255, 255, 0.1);*/
-}
 
 .section-title {
     margin-bottom: 20px;
     padding-left: 20px;
-}
-
-.slider-item {
-    width: 18%;
-    background-color: #111;
-    height: 150px;
-    background-image: url(../covers/6.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 90%;
-    display: inline-block;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
-.second-slider {
-    background-image: url(../covers/3.jpg);
 }
 
 .movie-summary-actions {}
@@ -260,7 +237,7 @@ body {
 }
 
 .MovieDetailsPage {
-    padding: 20px;
+    padding: 10px 0px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -268,7 +245,27 @@ body {
     top: 0px;
     bottom: 0px;
     text-shadow: 1px 1px rgba(0, 0, 0, 1);
+    width: 100%;
 }
+
+.movie-details-info {
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.movie-details-cover {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.3;
+    background-position: center;
+    background-size: cover;
+}
+
 
 .movie-stats {
     width: 600px;
@@ -279,4 +276,15 @@ body {
 .movie-stats td {
     font-size: 400%;
     color: yellow;
+}
+
+.movie-stats {
+    width: 350px;
+    font-size: 70%;
+}
+
+.movie-details-info .label {
+    font-size: 120%;
+    font-weight: bold;
+    margin-top: 20px;
 }

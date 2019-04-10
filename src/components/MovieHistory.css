@@ -1,0 +1,80 @@
+.MovieHistory {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-top: 70px;
+    overflow: hidden;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+}
+
+.movie-slider {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0px;
+}
+
+.movie-slider-items {
+    width: 1000%;
+    position: relative;
+    left: 0%;
+    transition: left .3s ease-in;
+}
+
+.slider-item {
+    width: 250px;
+    background-color: #111;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 90%;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.slider-arrow {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.slider-arrow:hover {
+    opacity: 1;
+}
+
+.slider-left-arrow {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: white;
+    font-size: 40px;
+}
+
+.slider-left-arrow:after {
+    content: '<';
+    position: absolute;
+    top: 45px;
+    left: 7px;
+}
+
+.slider-right-arrow {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: white;
+    font-size: 40px;
+}
+
+.slider-right-arrow:after {
+    content: '>';
+    position: absolute;
+    top: 45px;
+    left: 7px;
+}
