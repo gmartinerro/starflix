@@ -3,7 +3,7 @@
 ![The starflix project](https://raw.githubusercontent.com/gmartinerro/starflix/master/docs/snapshot.png)
 
 
-The **starflix project** shows a small SPA to search the sapi.co database for movies and show all the characters appearing in the star wars saga.
+The **starflix project** shows a small SPA to search the **swapi.co** database for movies and show all the characters appearing in the star wars saga.
 
 
 The idea is simulate a NETFLIX-like style interface where the user can find:
