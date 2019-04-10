@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
 import './App.css';
-import SearchPage from './SearchPage';
-import MovieDetailsPage from './MovieDetailsPage';
+import SearchPage from './pages/SearchPage';
+import MovieDetailsPage from './pages/MovieDetailsPage';
 
+/**
+ * Main Application class component.
+ * It just wraps up the application pages using the BrowserRouter component.
+ */
 class App extends Component {
 
     render() {

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import './MovieSummary.css';
 import { Link } from 'react-router-dom';
 
+/**
+ * Component that show a brief set of info realted to the currently selected movie
+ * on the main page. Just a simple component (could be done using a functional component,
+ * since it doesn't need any hook method)
+ */
 class MovieSummary extends Component {
 
     render() {

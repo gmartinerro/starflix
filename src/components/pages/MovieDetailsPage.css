@@ -1,0 +1,51 @@
+.MovieDetailsPage {
+    padding: 10px 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 1);
+    width: 100%;
+}
+
+.movie-details-info {
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.movie-details-cover {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.3;
+    background-position: center;
+    background-size: cover;
+}
+
+.movie-stats {
+    width: 600px;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.movie-stats td {
+    font-size: 400%;
+    color: yellow;
+}
+
+.movie-stats {
+    width: 350px;
+    font-size: 70%;
+}
+
+.movie-details-info .label {
+    font-size: 120%;
+    font-weight: bold;
+    margin-top: 20px;
+}

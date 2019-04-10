@@ -1,0 +1,94 @@
+body {
+    background-color: #222;
+    color: white;
+    opacity: 1;
+}
+
+.movie-highlight {
+    position: relative;
+    height: 300px;
+    top: 60px;
+    background-color: black;
+}
+
+.MovieSummary {
+    position: relative;
+    top: 30px;
+    left: 0px;
+    z-index: 10;
+    width: 600px;
+    height: 255px;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+}
+
+.movie-title {
+    font-size: 250%;
+    margin-bottom: 10px;
+}
+
+.movie-data {
+    margin-bottom: 20px;
+}
+
+.movie-director {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.movie-release-year {
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: 20px;
+    color: yellow;
+}
+
+.movie-summary {
+    font-size: 90%;
+    clear: both;
+    height: 100px;
+    overflow: hidden;
+}
+
+.cover-frame {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 300px;
+
+    -webkit-animation-name: MOVE-BG;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-mask-image: -webkit-gradient(linear,
+        right top,
+        left bottom,
+        color-stop(0.2, rgba(0, 0, 0, 1)),
+        color-stop(0.5, rgba(0, 0, 0, 1)),
+        color-stop(0.8, rgba(0, 0, 0, 0)),
+        color-stop(0.95, rgba(0, 0, 0, 0)),
+        color-stop(1, rgba(0, 0, 0, 0)));
+}
+
+@-webkit-keyframes MOVE-BG {
+    0% {
+        background-position: 30% 50%;
+        background-size: 130%;
+        opacity: 0;
+    }
+
+    50% {
+        background-position: 25% 55%;
+        background-size: 135%;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 20% 60%;
+        background-size: 140%;
+        opacity: 0;
+    }
+}

@@ -10,10 +10,6 @@ body {
     min-width: 550px;
 }
 
-.search-form {
-    margin-top: -5px;
-}
-
 .loading-veil {
     position: fixed;
     top: 0px;
@@ -25,60 +21,6 @@ body {
     background-position: center;
     background-color: black;
     background-size: contain;
-}
-
-.Header {
-    z-index: 100;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 40px;
-    background-color: #222;
-    padding: 10px;
-    border-bottom: 1px solid #444;
-    box-shadow: 0px 2px rgba(0, 0, 0, 0.5);
-}
-
-.cover-frame {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-    height: 300px;
-
-    -webkit-animation-name: MOVE-BG;
-    -webkit-animation-duration: 10s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-mask-image: -webkit-gradient(linear,
-        right top,
-        left bottom,
-        color-stop(0.2, rgba(0, 0, 0, 1)),
-        color-stop(0.5, rgba(0, 0, 0, 1)),
-        color-stop(0.8, rgba(0, 0, 0, 0)),
-        color-stop(0.95, rgba(0, 0, 0, 0)),
-        color-stop(1, rgba(0, 0, 0, 0)));
-}
-
-@-webkit-keyframes MOVE-BG {
-    0% {
-        background-position: 30% 50%;
-        background-size: 130%;
-        opacity: 0;
-    }
-
-    50% {
-        background-position: 25% 55%;
-        background-size: 135%;
-        opacity: 1;
-    }
-
-    100% {
-        background-position: 20% 60%;
-        background-size: 140%;
-        opacity: 0;
-    }
 }
 
 .movie-cover-1 {
@@ -109,68 +51,10 @@ body {
     background-image: url(../covers/7.jpg);
 }
 
-.movie-highlight {
-    position: relative;
-    height: 300px;
-    top: 60px;
-    background-color: black;
-}
-
-.MovieSummary {
-    position: relative;
-    top: 30px;
-    left: 0px;
-    z-index: 10;
-    width: 600px;
-    height: 255px;
-    max-width: 80%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 20px;
-}
-
-.movie-title {
-    font-size: 250%;
-    margin-bottom: 10px;
-}
-
-.movie-data {
-    margin-bottom: 20px;
-}
-
-.movie-director {
-    font-size: 120%;
-    font-weight: bold;
-}
-
-.movie-release-year {
-    font-size: 120%;
-    font-weight: bold;
-    margin-left: 20px;
-    color: yellow;
-}
-
-.movie-summary {
-    font-size: 90%;
-    clear: both;
-    height: 100px;
-    overflow: hidden;
-}
-
-.search-bar {
-    position: absolute;
-    right: 40px;
-    top: 20px;
-    font-size: 120%;
-}
-
-
 .section-title {
     margin-bottom: 20px;
     padding-left: 20px;
 }
-
-.movie-summary-actions {}
 
 .button {
     padding: 10px;
@@ -184,107 +68,4 @@ body {
 .button:hover {
     background-color: rgba(255, 255, 255, 1);
     color: black;
-}
-
-.search-button {
-    margin: 0px 10px;
-    outline: none;
-    border: none;
-    top: -4px;
-    position: relative;
-}
-
-.suggestions {
-    z-index: 30;
-    width: 250px;
-    background-color: #333;
-    height: auto;
-    min-height: 0px;
-    position: absolute;
-    right: 180px;
-    top: 61px;
-    box-shadow: 0px 2px rgba(0, 0, 0, 0.5);
-}
-
-.suggestions ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    width: 220px;
-    padding: 0px 10px;
-}
-
-.suggestions li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.suggestions li:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.suggestions li:hover {
-    color: yellow;
-}
-
-#search {
-    background-color: #333;
-    border: none;
-    color: white;
-    font-size: 120%;
-    outline-color: yellow;
-    padding: 3px 10px;
-}
-
-.MovieDetailsPage {
-    padding: 10px 0px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    text-shadow: 1px 1px rgba(0, 0, 0, 1);
-    width: 100%;
-}
-
-.movie-details-info {
-    max-width: 800px;
-    width: 80%;
-    margin: auto;
-    position: relative;
-}
-
-.movie-details-cover {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.3;
-    background-position: center;
-    background-size: cover;
-}
-
-
-.movie-stats {
-    width: 600px;
-    table-layout: fixed;
-    text-align: center;
-}
-
-.movie-stats td {
-    font-size: 400%;
-    color: yellow;
-}
-
-.movie-stats {
-    width: 350px;
-    font-size: 70%;
-}
-
-.movie-details-info .label {
-    font-size: 120%;
-    font-weight: bold;
-    margin-top: 20px;
 }

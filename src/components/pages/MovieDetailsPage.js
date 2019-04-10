@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import './MovieDetailsPage.css';
 import { connect } from 'react-redux';
 import {Redirect, Link} from 'react-router-dom';
-import { updateMovieHistory } from '../actions';
+import { updateMovieHistory } from '../../actions';
 
+/**
+ * MovieDetailsPage component. 
+ * Page showing extra info about the currently selected movie, whenever the user
+ * clicks the "VER FICHA" button.
+ */
 class MovieDetailsPage extends Component {
 
     componentDidMount(){
@@ -12,7 +18,9 @@ class MovieDetailsPage extends Component {
 
     render() {
         
-        if (!this.props.currentMovie) return (<Redirect to='/'></Redirect>);
+        // If no movie has already been selected, just go back home.
+        if (!this.props.currentMovie) 
+            return (<Redirect to='/'></Redirect>);
 
         const movie = this.props.currentMovie;
 

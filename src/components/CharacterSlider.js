@@ -3,7 +3,21 @@ import './CharacterSlider.css';
 import {connect} from 'react-redux';
 import {fetchCharacters, setCurrentMovie} from '../actions';
 
+// Time to set the automatic scroll period for the slider
+const CHARACTER_SLIDER_TIME = 3000;
 
+// Width in pixels for each item in the slider bar
+const CHARACTER_SLIDER_ITEM_WIDTH = 270;
+
+// Total amount of characters in the star wars movie saga
+const TOTAL_CHARACTER_COUNT = 87;
+
+/**
+ * Character slider component
+ * A simple component showing a slider with some information about the 
+ * characters included in the star wars movie saga.
+ * The sliders moves automatically each 3 seconds.
+ */
 class CharacterSlider extends Component {
 
     constructor(props){
@@ -19,7 +33,7 @@ class CharacterSlider extends Component {
         }
 
         // Scroll slider again and again...
-        setInterval(()=>this.scrollRight(),3000);
+        setInterval(()=>this.scrollRight(),CHARACTER_SLIDER_TIME);
     }
 
 
@@ -30,7 +44,7 @@ class CharacterSlider extends Component {
                 <div className='character-slider'>
                     <div className='character-slider-items' style={this.getSliderStyle()}>
                         {this.renderMovieSliderItems()}
-                    </div>                    
+                    </div>
                 </div>
             </div>
         );
@@ -40,7 +54,10 @@ class CharacterSlider extends Component {
         
         if (this.props.characters.length > 0){
             
-            if (this.props.characters.length < 87)
+            // Check the amount of items in the character list.
+            // If it is lower than the total amount found in the swapi api
+            // then request a new chunk to fill the list.
+            if (this.props.characters.length < TOTAL_CHARACTER_COUNT)
                 this.props.fetchCharacters(1 + this.props.characters.length/10);
 
             return this.props.characters.map(character=>{
@@ -59,7 +76,7 @@ class CharacterSlider extends Component {
     }
 
     scrollRight(){
-        this.setState({position:this.state.position-270})
+        this.setState({position:this.state.position - CHARACTER_SLIDER_ITEM_WIDTH})
     }
 
     getSliderStyle(){

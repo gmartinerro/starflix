@@ -1,0 +1,21 @@
+.search-form {
+    margin-top: -5px;
+}
+
+.search-button {
+    margin: 0px 10px;
+    outline: none;
+    border: none;
+    top: -4px;
+    position: relative;
+}
+
+
+#search {
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 120%;
+    outline-color: yellow;
+    padding: 3px 10px;
+}
