@@ -1,9 +1,9 @@
 import { GET_CHARACTERS } from '../actions/types';
 
-export default (state = null, action) => {
+export default (state = [], action) => {
     switch (action.type) {
         case GET_CHARACTERS:
-            return {characters: action.payload};
+            return [...state,...action.payload.results];
         default:
             return state;
     }

@@ -3,6 +3,7 @@ import Header from './Header';
 import { connect } from 'react-redux';
 import MovieSummary from './MovieSummary';
 import MovieHistory from './MovieHistory';
+import CharacterSlider from './CharacterSlider';
 import {fetchMovie,fetchCharacters} from '../actions';
 
 class SearchPage extends Component {
@@ -13,9 +14,6 @@ class SearchPage extends Component {
         console.log(movieId);
         this.props.fetchMovie(movieId)  
       }
-
-      if (!this.props.characters)
-        this.props.fetchCharacters();
     }
 
     onMovieSearch(movie){
@@ -23,8 +21,6 @@ class SearchPage extends Component {
     }
 
     render() {
-
-        console.log(this.props.currentMovie)
 
         if (!this.props.characters || !this.props.currentMovie)
             return(<div className='loading-veil'></div>);
@@ -38,6 +34,7 @@ class SearchPage extends Component {
                   <MovieSummary movie={this.props.currentMovie}/>
                 </div>
                 <MovieHistory/>
+                <CharacterSlider/>
             </div>
         );
     }
