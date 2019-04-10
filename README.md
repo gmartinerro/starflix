@@ -6,7 +6,7 @@
 The **starflix project** shows a small SPA to search the **swapi.co** database for movies and show all the characters appearing in the star wars saga.
 
 
-The idea is simulate a NETFLIX-like style interface where the user can find:
+The idea behind it is to simulate a NETFLIX-like style interface where the user will find:
 
 * A search bar to search a movie by title (using the search endpoint of swapi.)
 * A summary of the currently selected/found movie.
